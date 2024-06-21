@@ -7,15 +7,19 @@
         <th>Teléfono</th>
         <th>Fecha de Nacimiento</th>
         <th>Género</th>
+        <th>Acciones</th> <!-- Nueva columna para acciones -->
       </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-usuario>
+    <ng-template pTemplate="body" let-usuario let-i="rowIndex"> <!-- Agregar let-i="rowIndex" para obtener el índice -->
       <tr>
         <td>{{ usuario.nombre }}</td>
         <td>{{ usuario.correo }}</td>
         <td>{{ usuario.telefono }}</td>
         <td>{{ usuario.fechaNacimiento | date:'dd/MM/yyyy' }}</td>
         <td>{{ usuario.genero }}</td>
+        <td>
+          <button pButton type="button"  (click)="eliminarUsuario(i)" class="p-button-rounded p-button-danger">Eliminar</button>
+        </td>
       </tr>
     </ng-template>
   </p-table>

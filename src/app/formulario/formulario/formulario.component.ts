@@ -44,6 +44,11 @@ export class FormularioComponent {
     };
 
     console.log("Usuario agregado:", this.usuario);
+    this.reloadPage();
+  }
+  reloadPage() {
+    // Recargar la página actual
+    window.location.reload();
   }
 
 }

@@ -11,21 +11,20 @@ export class ListadoComponent implements OnInit {
   usuarios: Usuario[] = [];
 
   ngOnInit() {
-    // Obtener usuarios desde localStorage al inicializar el componente
+    this.actualizarUsuarios();
+  }
+
+  actualizarUsuarios() {
     const storedUsuarios = localStorage.getItem('usuarios');
     if (storedUsuarios) {
       this.usuarios = JSON.parse(storedUsuarios);
     }
+    localStorage.setItem('usuarios', JSON.stringify(this.usuarios));
   }
 
-  onUsuarioAgregado(agregado: boolean) {
-    if (agregado) {
-      // Actualizar la lista de usuarios después de que se agrega uno nuevo
-      const storedUsuarios = localStorage.getItem('usuarios');
-      if (storedUsuarios) {
-        this.usuarios = JSON.parse(storedUsuarios);
-      }
-    }
+  eliminarUsuario(index: number) {
+    this.usuarios.splice(index, 1);
+    localStorage.setItem('usuarios', JSON.stringify(this.usuarios));
   }
 
 }
