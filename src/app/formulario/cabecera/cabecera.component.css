@@ -1,0 +1,11 @@
+/* estilos.css */
+
+h1 {
+  color: #333; /* Cambia el color del texto a un tono oscuro */
+  font-family: Arial, sans-serif; /* Utiliza una fuente específica */
+  text-align: center; /* Centra el texto */
+  margin-bottom: 20px; /* Añade un margen inferior para separarlo de otros elementos */
+  text-transform: uppercase; /* Convierte el texto en mayúsculas */
+  border-bottom: 2px solid #ccc; /* Agrega un borde inferior */
+  padding-bottom: 5px; /* Añade un pequeño espacio debajo del borde */
+}

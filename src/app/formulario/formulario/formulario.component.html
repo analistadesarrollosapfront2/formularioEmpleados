@@ -1,0 +1,47 @@
+<p-fieldset legend="Formulario de Registro">
+
+
+
+<div class="card flex justify-content-center">
+  <p-floatLabel>
+    <input pInputText id="nombre" [(ngModel)]="usuario.nombre" />
+    <label for="nombre">Nombre</label>
+  </p-floatLabel>
+</div>
+
+<div class="card flex justify-content-center">
+  <p-floatLabel>
+    <input pInputText id="correo" [(ngModel)]="usuario.correo" />
+    <label for="correo">Correo</label>
+  </p-floatLabel>
+</div>
+
+<div class="card flex justify-content-center">
+  <p-floatLabel>
+    <input pInputText id="telefono" [(ngModel)]="usuario.telefono" />
+    <label for="telefono">Teléfono</label>
+  </p-floatLabel>
+</div>
+
+<div class="card flex justify-content-center">
+  <p-floatLabel>
+    <input pInputText type="date" id="fechaNacimiento" [(ngModel)]="usuario.fechaNacimiento" />
+    <label for="fechaNacimiento">Fecha de Nacimiento</label>
+  </p-floatLabel>
+</div>
+
+<div class="card flex justify-content-center">
+  <div class="flex flex-wrap gap-3">
+    <div class="flex align-items-center">
+      <p-radioButton name="genero" value="Masculino" [(ngModel)]="usuario.genero" inputId="generoMasculino" />
+      <label for="generoMasculino" class="ml-2">Masculino</label>
+    </div>
+    <div class="flex align-items-center">
+      <p-radioButton name="genero" value="Femenino" [(ngModel)]="usuario.genero" inputId="generoFemenino" />
+      <label for="generoFemenino" class="ml-2">Femenino</label>
+    </div>
+  </div>
+</div>
+
+<p-button (click)="agregar()">Agregar</p-button>
+</p-fieldset>

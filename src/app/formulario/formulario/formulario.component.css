@@ -1,0 +1,53 @@
+/* Estilo para el párrafo "formulario works!" */
+p {
+  font-size: 24px; /* Tamaño de fuente grande */
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilo para los contenedores de tarjetas */
+.card {
+  margin-bottom: 15px; /* Espacio inferior */
+  padding: 15px; /* Relleno interno */
+
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo específico para el contenedor de los radio buttons */
+.card.flex {
+  padding: 10px; /* Relleno interno más pequeño */
+}
+
+/* Estilo para los inputs dentro de p-floatLabel */
+p-floatLabel input {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 10px; /* Relleno interno */
+  border: 1px solid #ccc; /* Borde del campo */
+  border-radius: 3px; /* Bordes redondeados */
+}
+
+/* Estilo para las etiquetas dentro de p-floatLabel */
+p-floatLabel label {
+  position: absolute; /* Posición absoluta */
+  top: 10px; /* Distancia superior */
+  left: 10px; /* Distancia izquierda */
+  transition: 0.2s ease-out; /* Transición suave */
+  pointer-events: none; /* Evita que la etiqueta sea clickeable */
+}
+
+/* Estilo para la etiqueta cuando el input tiene focus o valor */
+p-floatLabel input:focus ~ label,
+p-floatLabel input:not(:placeholder-shown) ~ label {
+  top: -10px; /* Posición superior */
+  font-size: 12px; /* Tamaño de fuente más pequeño */
+  color: #333; /* Color del texto cuando está enfocado */
+}
+
+/* Estilo para los radio buttons y sus etiquetas */
+.flex.align-items-center {
+  margin-bottom: 5px; /* Espacio inferior más pequeño */
+}
+
+.flex.align-items-center label {
+  margin-left: 5px; /* Margen izquierdo */
+}
