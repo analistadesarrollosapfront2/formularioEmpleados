@@ -1,0 +1,40 @@
+.product-search {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .product-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  p-card {
+    width: 300px;
+    margin: 10px;
+  }
+  
+  p-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .search-container {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 0 20px; /* Ajusta el padding para espacio a los lados */
+  }
+  
+  .search-input {
+    margin-top: auto;
+    width: 1000px;
+  }
+
+  .btn-filtro {
+    margin: 1%;
+   
+  }
+  

@@ -1,8 +1,15 @@
-
-
-
-<app-cabecera></app-cabecera>
-
-<app-formulario></app-formulario>
-
-<app-listado></app-listado>
+<header>
+    <h1 style="text-align: center;"><span style="color: rebeccapurple;">Game Planet</span></h1>
+    <div class="card" style="align-items: center;">
+      <p-menubar [model]="items" />
+  </div>
+  
+   
+  </header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <footer style="display: flex;">
+    <p>Game Planet <br>contacto.com<br>477 908 73 23</p>
+  </footer>
+  
