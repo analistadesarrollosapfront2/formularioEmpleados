@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+  name: string = "";
+  surname: string = "";
+  email: string  = "";
+  subject: string = "";
+  message: string = "";
+
+  sendMessage() {
+    alert('Su respuesta ha sido enviada');
+  }
 }

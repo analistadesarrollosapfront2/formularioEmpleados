@@ -1,1 +1,41 @@
-<p>contact works!</p>
+<div style="display: flex;justify-content: center;" class="p-grid p-justify-between">
+  <div class="p-col-5">
+    <h3>Escríbenos</h3>
+    <div class="p-field">
+      <label for="name">Nombre</label>
+      <input id="name" type="text" pInputText [(ngModel)]="name">
+    </div>
+    <div class="p-field">
+      <label for="surname">Apellido</label>
+      <input id="surname" type="text" pInputText [(ngModel)]="surname">
+    </div>
+    <div class="p-field">
+      <label for="email">Email</label>
+      <input id="email" type="text" pInputText [(ngModel)]="email">
+    </div>
+    <div class="p-field">
+      <label for="subject">Asunto</label>
+      <input id="subject" type="text" pInputText [(ngModel)]="subject">
+    </div>
+    <div class="p-field">
+      <label for="message">Mensaje</label>
+      <textarea id="message" rows="6" cols="30" pInputTextarea [(ngModel)]="message"></textarea>
+    </div>
+    <button pButton type="button" label="Enviar" icon="pi pi-check" (click)="sendMessage()"></button>
+  </div>
+  <div class="p-col-5">
+    <h3>Oficinas</h3>
+    <p>
+      Carlos D. Zeinna No 60, Parque Industrial Xalostoc, Ecatepec, Edo de México, 55348
+    </p>
+    <p>
+      Conmutador: (55) 5747 45 45 y (55) 4744 45 45
+    </p>
+    <p>
+      Atención a Clientes: (55) 5747 45 46
+    </p>
+    <p>
+      <a href="mailto:contacto@tirmeex.com">contacto.com</a>
+    </p>
+  </div>
+</div>

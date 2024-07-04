@@ -1,15 +1,27 @@
 <header>
-    <h1 style="text-align: center;"><span style="color: rebeccapurple;">Game Planet</span></h1>
+  <div style="display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;">
+    <h1 >
+      <span style="color: rebeccapurple; margin-left: -182%;
+      font-size: -webkit-xxx-large;
+      font-family: initial;">Game Planet</span>
+    </h1>
+    <div >
+      <img src="https://centrosantafe.com.mx/cdn/shop/files/503.png?v=8821861158410439067" alt="Descripción de la imagen" style="max-width: 10%; height: auto;">
+    </div>
+  </div>
     <div class="card" style="align-items: center;">
       <p-menubar [model]="items" />
   </div>
-  
-   
+
+
   </header>
   <main>
     <router-outlet></router-outlet>
   </main>
-  <footer style="display: flex;">
+  <footer style="display: flex;     justify-content: space-around">
     <p>Game Planet <br>contacto.com<br>477 908 73 23</p>
   </footer>
-  
+

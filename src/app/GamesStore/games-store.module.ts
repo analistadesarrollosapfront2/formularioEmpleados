@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
 import { InputTextModule } from 'primeng/inputtext';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { FieldsetModule } from 'primeng/fieldset';
@@ -22,7 +22,7 @@ import { SplitButtonModule } from 'primeng/splitbutton';
     ContactComponent,
     HomeComponent,
     ProductsComponent,
-    
+
   ],
   imports: [
     CommonModule,
@@ -38,9 +38,10 @@ import { SplitButtonModule } from 'primeng/splitbutton';
         CardModule,
         ToolbarModule,
         SplitButtonModule,
-        
+        ReactiveFormsModule,
 
-        
+
+
   ],
   exports:[
     ContactComponent,
