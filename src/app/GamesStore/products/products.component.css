@@ -1,40 +1,78 @@
 .product-search {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .product-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  p-card {
-    width: 300px;
-    margin: 10px;
-  }
-  
-  p-card img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .search-container {
-    margin-top: 1%;
-    display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    padding: 0 20px; /* Ajusta el padding para espacio a los lados */
-  }
-  
-  .search-input {
-    margin-top: auto;
-    width: 1000px;
-  }
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-  .btn-filtro {
-    margin: 1%;
-   
-  }
-  
+.product-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+p-card {
+  width: 300px;
+  margin: 10px;
+}
+
+p-card img {
+  width: 100%;
+  height: auto;
+}
+
+.search-container {
+  margin-top: 1%;
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 0 20px; /* Ajusta el padding para espacio a los lados */
+}
+
+.search-input {
+  margin-top: auto;
+  width: 1000px;
+}
+
+.btn-filtro {
+  margin: 1%;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px;
+  width: 300px; /* Ajuste el ancho de la tarjeta */
+  text-align: center;
+  background-color: #fff; /* Fondo blanco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+.product-card img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
+}
+
+.product-card h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 0.9em;
+  color: #555;
+  margin: 10px 0;
+}
+
+.product-card p.price {
+  font-size: 1em;
+  color: #000;
+  font-weight: bold;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

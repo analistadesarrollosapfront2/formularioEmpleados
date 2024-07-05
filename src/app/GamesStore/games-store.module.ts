@@ -14,6 +14,7 @@ import { ProductsComponent } from './products/products.component';
 import { CardModule } from 'primeng/card';
 import { ToolbarModule } from 'primeng/toolbar';
 import { SplitButtonModule } from 'primeng/splitbutton';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -26,6 +27,7 @@ import { SplitButtonModule } from 'primeng/splitbutton';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
         //Modulos de Prime NG
         ButtonModule,
         PanelModule,

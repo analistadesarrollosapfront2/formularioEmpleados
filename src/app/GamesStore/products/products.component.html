@@ -1,24 +1,22 @@
 <div class="card">
-    <div class="search-container">
-      <span class="p-input-icon-left">
-        <i class="pi pi-search"></i>
-        <input pInputText placeholder="Search" class="search-input" />
-      </span>
+  <div class="search-container">
+    <span class="p-input-icon-left">
+      <i class="pi pi-search"></i>
+      <input pInputText placeholder="Search" class="search-input" (input)="onSearchChange($event)" />
+    </span>
+  </div>
+  <div style="display: flex; justify-content: center; align-items: center;">
+    <div *ngFor="let category of categories" style="margin: 1%;">
+      <p-button class="btn-filtro" icon="pi pi-check" (click)="filterByCategory(category)"></p-button>
+      <p>{{ category }}</p>
     </div>
-    <div  style="display: flex; justify-content: center;
-    align-items: center;">
-    <div style="margin: 1%;">
-    <p-button class="btn-filtro" icon="pi pi-check"></p-button>
-    <p>Terror</p>
   </div>
-  <div style="margin: 1%;">
-    <p-button class="btn-filtro" icon="pi pi-check"></p-button>
-    <p>Accion</p>
-  </div>
-  <div style="margin: 1%;">
-    <p-button class="btn-filtro" icon="pi pi-check"></p-button>
-    <p>Fantacia</p>
-  </div>
-
+  <div class="products">
+    <div *ngFor="let game of filteredGames" class="product-card">
+      <img [src]="game.imagen" alt="{{ game.nombre }}" />
+      <h3>{{ game.nombre }}</h3>
+      <p>{{ game.descripcion }}</p>
+      <p class="price">{{ game.precio | currency }}</p>
     </div>
+  </div>
 </div>
