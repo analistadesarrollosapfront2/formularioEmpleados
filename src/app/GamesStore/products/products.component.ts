@@ -9,8 +9,12 @@ import { GamesStoreService } from '../games-store.service';
 export class ProductsComponent implements OnInit {
   games: any[] = [];
   filteredGames: any[] = [];
-  categories: string[] = ['Terror', 'Accion', 'Fantasia'];
-  selectedCategory: string | undefined = undefined;
+  categories: any[] = [
+    { id: 1, name: 'Accion' },
+    { id: 2, name: 'Fantasia' },
+    { id: 3, name: 'Terror' }
+  ];
+  selectedCategory: number | undefined = undefined; 
   searchQuery: string = '';
 
   constructor(private gamesStoreService: GamesStoreService) { }
@@ -20,10 +24,10 @@ export class ProductsComponent implements OnInit {
   }
 
   loadGames(): void {
-    this.gamesStoreService.getGames(this.searchQuery, this.selectedCategory).subscribe(
+    this.gamesStoreService.getGames(this.searchQuery, this.selectedCategory?.toString()).subscribe(
       (data) => {
         this.games = data;
-        this.applyFilters(); // Aplicar filtros después de cargar juegos
+        this.applyFilters(); 
       },
       (error) => {
         console.error('Error fetching games:', error);
@@ -32,24 +36,25 @@ export class ProductsComponent implements OnInit {
   }
 
   applyFilters(): void {
-    // Aplicar filtro de búsqueda
+    // Aplicar filtro de búsqueda y categoría
     this.filteredGames = this.games.filter(game =>
-      game.nombre.toLowerCase().includes(this.searchQuery.toLowerCase())
+      (this.searchQuery === '' || game.nombre.toLowerCase().includes(this.searchQuery.toLowerCase())) &&
+      (this.selectedCategory === undefined || game.categoriaId === this.selectedCategory)
     );
   }
 
   onSearchChange(event: any): void {
     this.searchQuery = event.target.value;
-    this.applyFilters(); // Aplicar filtros al cambiar el término de búsqueda
+    this.applyFilters(); 
   }
 
-  filterByCategory(category: string): void {
-    this.selectedCategory = category;
-    this.loadGames(); // Recargar juegos con la nueva categoría seleccionada
+  filterByCategory(categoryId: number): void {
+    this.selectedCategory = categoryId;
+    this.loadGames(); 
   }
 
   clearCategoryFilter(): void {
     this.selectedCategory = undefined;
-    this.loadGames(); // Limpiar filtro de categoría y recargar juegos
+    this.loadGames(); 
   }
 }

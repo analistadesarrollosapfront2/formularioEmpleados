@@ -76,3 +76,28 @@ p-card img {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+/* Estilo para el botón de limpiar */
+.btn-clear {
+  background-color: #f44336; /* Color de fondo rojo */
+  color: white; /* Color del texto blanco */
+  border: none; /* Sin borde */
+  padding: 8px 16px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto centrada */
+  text-decoration: none; /* Sin decoración de texto */
+  display: inline-block; /* Mostrar como bloque en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  margin: 4px 2px; /* Margen */
+  cursor: pointer; /* Cursor al pasar el ratón */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Estilo para el botón de limpiar al pasar el ratón */
+.btn-clear:hover {
+  background-color: #d32f2f; /* Color de fondo rojo oscuro */
+}
+
+/* Estilo para el botón de limpiar al hacer clic */
+.btn-clear:active {
+  background-color: #b71c1c; /* Color de fondo rojo más oscuro */
+}

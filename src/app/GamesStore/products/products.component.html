@@ -7,11 +7,13 @@
   </div>
   <div style="display: flex; justify-content: center; align-items: center;">
     <div *ngFor="let category of categories" style="margin: 1%;">
-      <p-button class="btn-filtro" icon="pi pi-check" (click)="filterByCategory(category)"></p-button>
-      <p>{{ category }}</p>
+      <p-button class="btn-filtro" icon="pi pi-check" (click)="filterByCategory(category.id)"></p-button>
+      <p>{{ category.name }}</p>
     </div>
+    <button class="btn-clear" (click)="clearCategoryFilter()">Clear</button>
+
   </div>
-  <div class="products">
+  <div  class="products">
     <div *ngFor="let game of filteredGames" class="product-card">
       <img [src]="game.imagen" alt="{{ game.nombre }}" />
       <h3>{{ game.nombre }}</h3>
